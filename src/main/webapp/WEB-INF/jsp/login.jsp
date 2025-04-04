@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="row">
-                <p>Don't have an account? <a href="${pageContext.request.contextPath}x/register">Sign up here!</a></p>
+                <p>Don't have an account? <a href="${pageContext.request.contextPath}/register">Sign up here!</a></p>
             </div>
         </div>
 
