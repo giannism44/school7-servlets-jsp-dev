@@ -54,7 +54,7 @@
             <!-- City Dropdown -->
                 <select class="m-bottom" name="cityId">
                 <%-- The Select City option appears in the dropdown but cannot be chosen after a real selection is made --%>
-                    <option value="" disabled ${empty insertDTO.cityId ? 'selected' : ''}>
+                    <option value="" disabled ${empty updateDTO.cityId ? 'selected' : ''}>
                         Select City
                     </option>
                     <c:forEach items="${cities}" var="city">

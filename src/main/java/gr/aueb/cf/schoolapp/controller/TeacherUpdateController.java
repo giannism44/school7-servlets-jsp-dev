@@ -36,6 +36,7 @@ public class TeacherUpdateController extends HttpServlet {
     ITeacherService teacherService = new TeacherServiceImpl(teacherDAO);
     ICityDAO cityDAO = new CityDAOImpl();
     ICityService cityService = new CityServiceImpl(cityDAO);
+    TeacherUpdateDTO updateDTO;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -69,8 +70,6 @@ public class TeacherUpdateController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-
-        TeacherUpdateDTO updateDTO;
         Map<String, String> errors;
         String firstnameMessage;
         String lastnameMessage;
