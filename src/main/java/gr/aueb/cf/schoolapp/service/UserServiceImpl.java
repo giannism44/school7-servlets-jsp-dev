@@ -5,6 +5,7 @@ import gr.aueb.cf.schoolapp.dao.IUserDAO;
 import gr.aueb.cf.schoolapp.exceptions.UserDAOException;
 import gr.aueb.cf.schoolapp.dto.InsertUserDTO;
 import gr.aueb.cf.schoolapp.exceptions.UserNotFoundException;
+import gr.aueb.cf.schoolapp.mapper.Mapper;
 import gr.aueb.cf.schoolapp.model.User;
 
 public class UserServiceImpl implements IUserService {
@@ -20,10 +21,11 @@ public class UserServiceImpl implements IUserService {
         User user;
 
         try {
-            user = mapToUser(dto);
+            user = Mapper.mapToUser(dto);
+            // log
             return userDAO.insert(user);
         } catch (UserDAOException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
             // log
             // rollback
             throw e;
@@ -73,7 +75,7 @@ public class UserServiceImpl implements IUserService {
         }
     }
 
-    private User mapToUser(InsertUserDTO dto) {
-        return new User(null, dto.getUsername(), dto.getPassword(), RoleType.valueOf(dto.getRole()));
-    }
+//    private User mapToUser(InsertUserDTO dto) {
+//        return new User(null, dto.getUsername(), dto.getPassword(), RoleType.valueOf(dto.getRole()));
+//    }
 }

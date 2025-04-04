@@ -1,9 +1,7 @@
 package gr.aueb.cf.schoolapp.mapper;
 
-import gr.aueb.cf.schoolapp.dto.TeacherInsertDTO;
-import gr.aueb.cf.schoolapp.dto.TeacherReadOnlyDTO;
-import gr.aueb.cf.schoolapp.dto.TeacherUpdateDTO;
-import gr.aueb.cf.schoolapp.dto.UserReadOnlyDTO;
+import gr.aueb.cf.schoolapp.core.RoleType;
+import gr.aueb.cf.schoolapp.dto.*;
 import gr.aueb.cf.schoolapp.model.Teacher;
 import gr.aueb.cf.schoolapp.model.User;
 
@@ -41,6 +39,10 @@ public class Mapper {
 
     public static UserReadOnlyDTO mapToReadOnlyDTO(User user) {
         return new UserReadOnlyDTO(user.getId(), user.getUsername(), user.getPassword());
+    }
+
+    public static User mapToUser(InsertUserDTO dto) {
+        return new User(null, dto.getUsername(), dto.getPassword(), RoleType.valueOf(dto.getRole()));
     }
 
 }
