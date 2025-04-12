@@ -72,7 +72,7 @@ public class LoginController extends HttpServlet {
             }
 
             //response.sendRedirect(request.getContextPath() + "/school-app/dashboard");
-            response.sendRedirect(request.getContextPath() + "/school-app/teachers/view");
+            response.sendRedirect(request.getContextPath() + "/school-app/dashboard");
 
 
 //                response.sendRedirect(request.getContextPath() + "/login?isError=true");

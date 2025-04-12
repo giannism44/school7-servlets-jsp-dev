@@ -21,7 +21,5 @@
             <a href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/view' />">Προβολή Καθηγητών</a>
         </div>
 
-
-
 </body>
 </html>
