@@ -30,10 +30,8 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String isError = request.getParameter("isError");
-        request.setAttribute("isError", isError == null ? "false" : "true");
 
-        request.getRequestDispatcher("WEB-INF/jsp/login.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/jsp/login2.jsp").forward(request, response);
     }
 
     @Override
@@ -51,7 +49,7 @@ public class LoginController extends HttpServlet {
 
             if (!principleIsAuthenticated) {
                 request.setAttribute("error", "Invalid credentials");
-                request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
+                request.getRequestDispatcher("/WEB-INF/jsp/login2.jsp").forward(request, response);
                 return;
             }
 
@@ -73,7 +71,8 @@ public class LoginController extends HttpServlet {
                 session.setMaxInactiveInterval(ADMIN_TIMEOUT);  // Admin get 30-min sessions
             }
 
-            response.sendRedirect(request.getContextPath() + "/school-app/dashboard");
+            //response.sendRedirect(request.getContextPath() + "/school-app/dashboard");
+            response.sendRedirect(request.getContextPath() + "/school-app/teachers/view");
 
 
 //                response.sendRedirect(request.getContextPath() + "/login?isError=true");

@@ -30,7 +30,7 @@ public class UserRegisterController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        request.getRequestDispatcher("/WEB-INF/jsp/user-register.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/jsp/user-register2.jsp").forward(request, response);
     }
 
     @Override
@@ -68,7 +68,7 @@ public class UserRegisterController extends HttpServlet {
                 request.setAttribute("confirmPasswordMessage", confirmPasswordMessage);
 
                 request.setAttribute("userRegisterDTO", insertUserDTO);
-                request.getRequestDispatcher("/WEB-INF/jsp/user-register.jsp")
+                request.getRequestDispatcher("/WEB-INF/jsp/user-register2.jsp")
                         .forward(request, response);
                 return;
             }
@@ -87,7 +87,7 @@ public class UserRegisterController extends HttpServlet {
         } catch (UserDAOException e) {
             errorMessage = e.getMessage();
             request.setAttribute("errorMessage", errorMessage);
-            request.getRequestDispatcher("/WEB-INF/jsp/user-register.jsp")
+            request.getRequestDispatcher("/WEB-INF/jsp/user-register2.jsp")
                     .forward(request, response);
         }
 

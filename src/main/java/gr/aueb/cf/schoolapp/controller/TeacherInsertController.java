@@ -27,7 +27,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/school-app/teachers/insert")
+@WebServlet("/school-app/teachers/insert-prev")
 public class TeacherInsertController extends HttpServlet {
 
     ITeacherDAO teacherDAO = new TeacherDAOImpl();
@@ -47,7 +47,7 @@ public class TeacherInsertController extends HttpServlet {
         } catch (SQLException e) {
             String errorMessage = e.getMessage();
             req.getSession().setAttribute("errorMessage", errorMessage);
-            req.getRequestDispatcher("/WEB-INF/jsp/teacher-insert.jsp")
+            req.getRequestDispatcher("/WEB-INF/jsp/teacher-insert3.jsp")
                     .forward(req, resp);
         }
         req.setAttribute("cities", cities);
@@ -61,7 +61,7 @@ public class TeacherInsertController extends HttpServlet {
             req.getSession().removeAttribute("insertDTO");
             //req.getSession().removeAttribute("errors");
         }
-        req.getRequestDispatcher("/WEB-INF/jsp/teacher-insert.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/teacher-insert3.jsp").forward(req, resp);
     }
 
     @Override
