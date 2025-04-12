@@ -62,7 +62,7 @@ public class LoginController extends HttpServlet {
             if (oldSession != null) {
                 oldSession.invalidate(); // Destroy attacker's session
             }
-            HttpSession session = request.getSession(true);  // Create new one for address fixation attack
+            HttpSession session = request.getSession(true); // create a session object
             session.setAttribute("authenticated", true);
             session.setAttribute("username", username);
             session.setAttribute("role", userService.getUserByUsername(username).getRoleType().name());

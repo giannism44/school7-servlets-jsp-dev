@@ -5,7 +5,7 @@
          version="6.0">
 
   <session-config>
-    <session-timeout>5</session-timeout>
+    <session-timeout>2</session-timeout>
   </session-config>
 
 

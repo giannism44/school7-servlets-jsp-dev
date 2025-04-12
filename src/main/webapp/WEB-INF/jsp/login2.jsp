@@ -44,14 +44,10 @@
                 <!-- Error Messages -->
                 <c:if test="${not empty error}">
                     <div class="mb-6 p-3 bg-red-50 border-l-4 border-red-500 text-red-700 rounded">
-                        <p>${error}</p>
+                        <p>${requestScope.error}</p>
                     </div>
                 </c:if>
-                <c:if test="${requestScope.isError == 'true'}">
-                    <div class="mb-6 p-3 bg-red-50 border-l-4 border-red-500 text-red-700 rounded">
-                        <p>Μη έγκυρο email ή password. Παρακαλώ ξαναπροσπαθήστε.</p>
-                    </div>
-                </c:if>
+
 
                 <!-- Login Form -->
                 <form method="POST" action="${pageContext.request.contextPath}/login" class="space-y-6">

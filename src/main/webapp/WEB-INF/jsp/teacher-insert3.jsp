@@ -123,7 +123,7 @@
                                class="w-full px-3 py-2 border ${not empty requestScope.streetNumMessage ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                placeholder="Αριθμός">
                         <c:if test="${not empty requestScope.streetNumMessage}">
-                            <p class="mt-1 text-sm text-red-600">${requestScope.st;p[   j4yl77l7reetNumMessage}</p>
+                            <p class="mt-1 text-sm text-red-600">${requestScope.streetNumMessage}</p>
                         </c:if>
                     </div>
                 </div>

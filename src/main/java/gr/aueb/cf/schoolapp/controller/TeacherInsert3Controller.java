@@ -26,8 +26,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/school-app/teachers/insert")
-public class TeacherInsert2Controller extends HttpServlet {
+
+@WebServlet("/school-app/teachers/insert-pre")
+public class TeacherInsert3Controller extends HttpServlet {
     ITeacherDAO teacherDAO = new TeacherDAOImpl();
     ITeacherService teacherService = new TeacherServiceImpl(teacherDAO);
     ICityDAO cityDAO = new CityDAOImpl();
@@ -98,12 +99,9 @@ public class TeacherInsert2Controller extends HttpServlet {
             // Call service if validation passed
             TeacherReadOnlyDTO readOnlyDTO = teacherService.insertTeacher(insertDTO);
             req.getSession().setAttribute("teacherInfo", readOnlyDTO);
-
-            // Clear any previous form data from session
-
             resp.sendRedirect(req.getContextPath() + "/school-app/teacher-inserted");
 
-        } catch (IOException | TeacherDAOException | TeacherAlreadyExistsException e) {
+        } catch (TeacherDAOException | TeacherAlreadyExistsException e) {
             formData.put("errorMessage", e.getMessage());
             req.getSession().setAttribute("formData", formData);
             resp.sendRedirect(req.getContextPath() + "/school-app/teachers/insert");

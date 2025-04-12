@@ -64,7 +64,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
+            animation: fadeIn 1s ease-out forwards;
         }
     </style>
 </body>
