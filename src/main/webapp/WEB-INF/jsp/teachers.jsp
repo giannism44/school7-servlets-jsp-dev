@@ -67,7 +67,7 @@
     </c:if>
 </div>
 
-<%@ include file="footer.jsp"%>
+<%@ include file="footer2.jsp"%>
 
 <script src="${pageContext.request.contextPath}/js/teachers.js">
 
