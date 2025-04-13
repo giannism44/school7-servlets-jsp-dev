@@ -48,7 +48,7 @@ public class TeachersViewController extends HttpServlet {
 
             if (teacherReadOnlyDTOS.isEmpty()) {
                 request.setAttribute("message", "Teachers not found");
-                request.getRequestDispatcher("/WEB-INF/jsp/teachers.jsp3").forward(request, response);
+                request.getRequestDispatcher("/WEB-INF/jsp/teachers3 .jsp").forward(request, response);
                 return;
             }
 
