@@ -16,7 +16,7 @@
             <div class="flex items-center space-x-4">
                 <a href="${pageContext.request.contextPath}">
                     <img class="h-10 w-auto"
-                         src="${pageContext.request.contextPath}/img/gov_header_logo.svg"
+                         src="${pageContext.request.contextPath}/img/AUEB.jpg"
                          alt="Government Logo">
                 </a>
                 <span class="text-lg font-semibold text-gray-800 hidden sm:block">

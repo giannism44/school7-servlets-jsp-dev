@@ -33,14 +33,14 @@
 
 </head>
 <body>
-  <%@ include file="header2.jsp"%>
+  <%@ include file="header3.jsp"%>
 
 
 <div class="container-fluid ">
-    <div class="row bg-secondary" style="min-height: 80vh;">
+    <div class="row bg-success-subtle" style="min-height: 80vh;">
 
-      <div class="dropdown col-md-3 border-end border-black ">
-        <button class="btn btn-secondary dropdown-toggle btn-lg mt-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown col-md-2 border-end border-black ">
+        <button class="btn btn-secondary dropdown-toggle btn-lg mt-2 btn-success" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Μενού
         </button>
         <ul class="dropdown-menu">
@@ -65,10 +65,9 @@
         </ul>
       </div>
 
-        <main class="col-md-9 p-4">
-            <h3>Καλωσήρθες στο Dashboard</h3>
-            <p>Εδώ μπορείς να δεις στατιστικά, επιλογές και λειτουργίες.</p>
-        </main>
+        <main class="col-md-10 p-4">
+            <h2>Καλωσήρθες στην αρχική σελίδα του Coding Factory.Απο εδώ μπορείς να διαχειριστής τον λογαριασμό σου.</h2>
+       </main>
     </div>
 </div>
 

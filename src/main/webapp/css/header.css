@@ -1,7 +1,7 @@
 :root {
     --color-white: #fff;
-    --color-blue-300: rgb(0, 101, 179);
-    --color-blue-dark: rgb(0, 51, 117);
+    --color-blue-300: #692524;
+    --color-blue-dark: #692524;
     --color-yellow: rgb(255, 221, 36);
     --color-dark: #000;
 }
@@ -38,7 +38,7 @@
 
 
 .login-name a {
-    background-color: var(--color-yellow);
+    /* background-color: var(--color-yellow); */
     color: var(--color-dark);
     margin-right: 10px;
     text-decoration: none;
@@ -50,7 +50,7 @@
 }
 
 .line {
-    background-color: var(--color-blue-300);
+    background-color: #692524;
     height: 8px;
 }
 

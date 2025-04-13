@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/user-register.css">
 </head>
 <body>
-<%@ include file="header.jsp"%>
+<%@ include file="header3.jsp"%>
 
 <div class="main-content">
 

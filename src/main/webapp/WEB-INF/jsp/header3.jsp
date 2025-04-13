@@ -12,8 +12,8 @@
                 extend: {
                     colors: {
                         primary: {
-                            800: '#1e3a8a',  // Dark blue for header
-                            900: '#172554'   // Even darker blue
+                            800: '#692121',  // Dark blue for header
+                            // 900: '#172554'   // Even darker blue
                         }
                     }
                 }
@@ -30,9 +30,9 @@
             <div class="flex items-center space-x-4">
                 <a href="${pageContext.request.contextPath}">
                     <img class="h-10 w-auto"
-                         src="${pageContext.request.contextPath}/img/gov_header_logo.svg"
-                         alt="Government Logo"
-                         style="filter: brightness(0) invert(1)"> <!-- Ensures white logo visibility -->
+                         src="${pageContext.request.contextPath}/img/AUEB.jpg"
+                         alt="AUEB Logo"
+                    > 
                 </a>
                 <span class="text-lg font-semibold text-white hidden sm:block">
                     Coding Factory - Education Reinvented
