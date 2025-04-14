@@ -23,8 +23,8 @@
           <h4 class="alert-heading">✅ Επιτυχία!</h4>
           <p class="mt-3">${requestScope.message}</p>
           <hr>
-          <a href="${pageContext.request.contextPath}/school-app/dashboard" class="btn btn-success mt-3">
-              Επιστροφή στην Αρχική
+          <a href="${pageContext.request.contextPath}/school-app/teachers/view" class="btn btn-success mt-3">
+              Μετάβαση στην Προβολή Καθηγητών
           </a>
       </div>
   </div>
