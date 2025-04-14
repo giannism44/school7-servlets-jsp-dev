@@ -50,7 +50,6 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/view' />">Προβολή</a></li>
                 <li><a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/insert' />">Εισαγωγή</a></li>
-                <li><a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/update' />">Επεξεργασία</a></li>
               </ul>
             </li>
             
@@ -59,7 +58,6 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Προβολή</a></li>
                 <li><a class="dropdown-item" href="#">Εισαγωγή</a></li>
-                <li><a class="dropdown-item" href="#">Διαγραφή</a></li>
               </ul>
             </li> 
         </ul>
