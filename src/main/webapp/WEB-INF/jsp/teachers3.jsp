@@ -52,13 +52,21 @@
             <p class="text-gray-600">Διαχείριση και προβολή καθηγητών</p>
         </div>
 
-        <c:if test="${sessionScope.role == 'ADMIN'}">
-            <a href="${pageContext.request.contextPath}/school-app/teachers/insert"
-               class="inline-flex items-center px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200 shadow-sm">
-                <i class="fas fa-plus mr-2"></i>
-                Εισαγωγή Καθηγητή
-            </a>
-        </c:if>
+       <div class="flex flex-col gap-2">
+           <c:if test="${sessionScope.role == 'ADMIN'}">
+               <a href="${pageContext.request.contextPath}/school-app/teachers/insert"
+                  class="inline-flex items-center px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg">
+                   <i class="fas fa-plus mr-2"></i>
+                   Εισαγωγή Καθηγητή
+               </a>
+           </c:if>
+
+           <a href="${pageContext.request.contextPath}/school-app/dashboard"
+              class="inline-flex items-center px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg">
+               <i class="fas fa-arrow-left mr-2"></i>
+               Επιστροφή στην Αρχική
+           </a>
+       </div>
     </div>
 
     <!-- Search Card -->
