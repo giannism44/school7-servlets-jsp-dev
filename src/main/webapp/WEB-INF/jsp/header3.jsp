@@ -26,7 +26,7 @@
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between py-3">
             <div class="flex items-center space-x-4">
-                <a href="${pageContext.request.contextPath}/school-app/dashboard">
+                <a href="${pageContext.request.contextPath}">
                     <img class="h-10 w-auto"
                          src="${pageContext.request.contextPath}/img/AUEB.jpg"
                          alt="AUEB Logo"
@@ -55,8 +55,7 @@
             </div>
         </div>
     </div>
-
-    <div class="h-0.5 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+    <div class="h-0.5 bg-gradient-to-r from-red-600 to-red-700"></div>
 </header>
 </body>
 </html>
