@@ -26,6 +26,8 @@ public class UserRegisteredController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        request.getRequestDispatcher("/WEB-INF/jsp/user-registered.jsp").forward(request, response);
+        request.setAttribute("message", "Ο λογαριασμός προστέθηκε με επιτυχία!");
+        request.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(request, response);
+
     }
 }

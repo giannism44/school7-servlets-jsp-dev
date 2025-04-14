@@ -21,19 +21,18 @@ public class TeacherDeleteController extends HttpServlet {
     ITeacherService teacherService = new TeacherServiceImpl(teacherDAO);
     String message = "";
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        int id = Integer.parseInt(req.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id"));
 
         try {
             teacherService.deleteTeacher(id);
-            req.setAttribute("id", id);
-            req.getRequestDispatcher("/WEB-INF/jsp/teacher-deleted.jsp").forward(req, resp);
+            request.setAttribute("message", "Ο καθηγητής διαγράφηκε  με επιτυχία!");
         } catch (TeacherDAOException | TeacherNotFoundException e) {
             message = e.getMessage();
-            req.setAttribute("message", message);
-            req.getRequestDispatcher("/WEB-INF/jsp/teachers.jsp").forward(req, resp);
+            request.setAttribute("message", message);
         }
+        request.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(request, response);
     }
 }
