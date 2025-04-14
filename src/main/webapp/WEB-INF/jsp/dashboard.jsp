@@ -40,7 +40,7 @@
     <div class="row bg-success-subtle" style="min-height: 80vh;">
 
       <div class="dropdown col-md-2 border-end border-black ">
-        <button class="btn btn-secondary dropdown-toggle btn-lg mt-2 btn-success" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-secondary dropdown-toggle btn-lg mt-2 btn-danger" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Μενού
         </button>
         <ul class="dropdown-menu">

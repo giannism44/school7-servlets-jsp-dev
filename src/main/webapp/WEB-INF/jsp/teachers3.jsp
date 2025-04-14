@@ -86,7 +86,7 @@
                 </div>
                 <div class="flex items-end space-x-2 md:col-span-2">
                     <button id="submitBtn" type="submit"
-                            class="flex-1 inline-flex justify-center items-center px-4 py-2 bg-success-500 hover:bg-success-600 text-white font-medium rounded-lg transition-colors duration-200 shadow-sm">
+                            class="flex-1 inline-flex justify-center items-center px-4 py-2 bg-red-800 hover:bg-red-900 text-white font-medium rounded-lg transition-colors duration-200 shadow-sm">
                         <i class="fas fa-search mr-2"></i>
                         Αναζήτηση
                     </button>
