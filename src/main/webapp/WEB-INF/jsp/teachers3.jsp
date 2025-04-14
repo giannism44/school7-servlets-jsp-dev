@@ -127,17 +127,19 @@
                                                title="Προβολή">
                                                 <i class="fas fa-eye w-5 h-5"></i>
                                             </a>
-                                            <a href="${pageContext.request.contextPath}/school-app/teachers/update?id=${teacher.id}"
-                                               class="text-warning-500 hover:text-warning-600 p-1 rounded-full hover:bg-warning-50 transition-colors duration-200"
-                                               title="Επεξεργασία">
-                                                <i class="fas fa-pen-to-square w-5 h-5"></i>
-                                            </a>
-                                            <a href="${pageContext.request.contextPath}/school-app/teachers/delete?id=${teacher.id}"
-                                               onclick="return confirm('Είστε βέβαιοι ότι θέλετε να διαγράψετε τον καθηγητή;')"
-                                               class="text-danger-500 hover:text-danger-600 p-1 rounded-full hover:bg-danger-50 transition-colors duration-200"
-                                               title="Διαγραφή">
-                                                <i class="fas fa-trash-can w-5 h-5"></i>
-                                            </a>
+                                            <c:if test="${sessionScope.role == 'ADMIN'}">
+                                                        <a href="${pageContext.request.contextPath}/school-app/teachers/update?id=${teacher.id}"
+                                                        class="text-warning-500 hover:text-warning-600 p-1 rounded-full hover:bg-warning-50 transition-colors duration-200"
+                                                        title="Επεξεργασία">
+                                                        <i class="fas fa-pen-to-square w-5 h-5"></i>
+                                                        </a>
+                                                        <a href="${pageContext.request.contextPath}/school-app/teachers/delete?id=${teacher.id}"
+                                                           onclick="return confirm('Είστε βέβαιοι ότι θέλετε να διαγράψετε τον καθηγητή;')"
+                                                           class="text-danger-500 hover:text-danger-600 p-1 rounded-full hover:bg-danger-50 transition-colors duration-200"
+                                                           title="Διαγραφή">
+                                                            <i class="fas fa-trash-can w-5 h-5"></i>
+                                                        </a>
+                                            </c:if>
                                         </div>
                                     </td>
                                 </tr>
