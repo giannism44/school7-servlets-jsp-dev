@@ -24,11 +24,9 @@
 <body>
 <header class="bg-primary-800">
     <div class="container mx-auto px-4">
-        <!-- Main header content -->
         <div class="flex items-center justify-between py-3">
-            <!-- Logo and title -->
             <div class="flex items-center space-x-4">
-                <a href="${pageContext.request.contextPath}">
+                <a href="${pageContext.request.contextPath}/school-app/dashboard">
                     <img class="h-10 w-auto"
                          src="${pageContext.request.contextPath}/img/AUEB.jpg"
                          alt="AUEB Logo"
@@ -39,7 +37,6 @@
                 </span>
             </div>
 
-            <!-- User info and logout -->
             <div class="flex items-center space-x-4">
                 <c:if test="${sessionScope.username != null}">
                     <div class="flex items-center space-x-3">
@@ -59,7 +56,6 @@
         </div>
     </div>
 
-    <!-- Decorative line -->
     <div class="h-0.5 bg-gradient-to-r from-blue-400 to-blue-600"></div>
 </header>
 </body>
