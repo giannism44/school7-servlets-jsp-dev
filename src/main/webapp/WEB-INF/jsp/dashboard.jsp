@@ -48,16 +48,39 @@
             <li class="dropend">
               <a class="dropdown-item dropdown-toggle" href="">Καθηγητές</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/view' />">Προβολή</a></li>
-                <li><a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/insert' />">Εισαγωγή</a></li>
+                    <li>
+                        <a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/view' />">
+                        Προβολή
+                        </a>
+                    </li>
+
+                    <c:if test="${sessionScope.role == 'ADMIN'}">
+                     <li>
+                        <a class="dropdown-item"
+                         href="<c:url value='${pageContext.request.contextPath}/school-app/teachers/insert' />">
+                         Εισαγωγή
+                        </a>
+                      </li>
+                    </c:if>
               </ul>
             </li>
             
             <li class="dropend">
               <a class="dropdown-item dropdown-toggle" href="#">Μαθητές</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Προβολή</a></li>
-                <li><a class="dropdown-item" href="#">Εισαγωγή</a></li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                    Προβολή
+                    </a>
+                </li>
+
+                 <c:if test="${sessionScope.role == 'ADMIN'}">
+                    <li>
+                        <a class="dropdown-item" href="#">
+                        Εισαγωγή
+                        </a>
+                    </li>
+                 </c:if>
               </ul>
             </li> 
         </ul>
