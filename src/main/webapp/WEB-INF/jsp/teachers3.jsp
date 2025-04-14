@@ -122,7 +122,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${teacher.lastname}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
                                         <div class="flex justify-end space-x-3">
-                                            <a href="${pageContext.request.contextPath}/school-app/teachers/view?id=${teacher.id}"
+                                            <a href="${pageContext.request.contextPath}/school-app/teachers/details?id=${teacher.id}"
                                                class="text-primary-500 hover:text-primary-600 p-1 rounded-full hover:bg-primary-50 transition-colors duration-200"
                                                title="Προβολή">
                                                 <i class="fas fa-eye w-5 h-5"></i>

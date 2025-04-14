@@ -99,10 +99,14 @@ public class TeacherServiceImpl implements ITeacherService {
 
         try {
             teacher = teacherDAO.getById(id);
-            return Mapper.mapTeacherToReadOnlyDTO(teacher).orElseThrow(() -> new TeacherNotFoundException("Teacher not found in get teacher by id"));
+
+            if (teacher == null) {
+                throw new TeacherNotFoundException(" Ο καθηγητής με ID = " + id + " δεν βρέθηκε στη βάση.");
+            }
+
+            return Mapper.mapTeacherToReadOnlyDTO(teacher)
+                    .orElseThrow(() -> new TeacherNotFoundException(" Σφάλμα κατά τη μετατροπή σε DTO."));
         } catch (TeacherNotFoundException | TeacherDAOException e) {
-            //e.printStackTrace();
-            // rollback
             throw e;
         }
     }
