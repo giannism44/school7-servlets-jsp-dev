@@ -12,8 +12,7 @@
                 extend: {
                     colors: {
                         primary: {
-                            800: '#692121',  // Dark blue for header
-                            // 900: '#172554'   // Even darker blue
+                            800: '#692121',
                         }
                     }
                 }
@@ -26,11 +25,11 @@
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between py-3">
             <div class="flex items-center space-x-4">
-                <a href="${pageContext.request.contextPath}">
+                <a href="${pageContext.request.contextPath}/school-app/dashboard">
                     <img class="h-10 w-auto"
                          src="${pageContext.request.contextPath}/img/AUEB.jpg"
                          alt="AUEB Logo"
-                    > 
+                    >
                 </a>
                 <span class="text-lg font-semibold text-white hidden sm:block">
                     Coding Factory - Education Reinvented

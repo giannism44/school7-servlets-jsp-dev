@@ -163,7 +163,7 @@
                 <!-- Submit Button -->
                 <div class="pt-4">
                     <button type="submit"
-                            class="w-full md:w-auto px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                            class="w-full md:w-auto px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                         Εισαγωγή
                     </button>
                 </div>
@@ -173,7 +173,7 @@
         <!-- Back Link -->
         <div class="text-center">
             <a href="${pageContext.request.contextPath}/school-app/teachers/view"
-               class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+               class="text-red-800 hover:text-red-900 font-medium transition-colors duration-200">
                 Επιστροφή στη λίστα καθηγητών
             </a>
         </div>
