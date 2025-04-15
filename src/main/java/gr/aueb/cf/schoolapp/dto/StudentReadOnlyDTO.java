@@ -7,12 +7,12 @@ public class StudentReadOnlyDTO extends BaseStudentDTO{
 
     public StudentReadOnlyDTO() {}
 
-    public StudentReadOnlyDTO(String firstname, String lastname, String vat,
+    public StudentReadOnlyDTO(Integer id, String uuid, String firstname, String lastname, String vat,
                               String fatherName, String phoneNum, String email, String street,
-                              String streetNum, String zipCode, Integer cityId, String uuid, Integer id) {
+                              String streetNum, String zipCode, Integer cityId) {
         super(firstname, lastname, vat, fatherName, phoneNum, email, street, streetNum, zipCode, cityId);
-        this.uuid = uuid;
         this.id = id;
+        this.uuid = uuid;
     }
 
     public Integer getId() {return id;}
