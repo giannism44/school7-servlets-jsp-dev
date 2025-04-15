@@ -11,7 +11,7 @@ import java.util.List;
 public interface IStudentService {
     StudentReadOnlyDTO insertStudent(StudentInsertDTO dto)
             throws StudentDAOException, StudentAlreadyExistsException;
-    StudentReadOnlyDTO updateStudent(StudentUpdateDTO dto)
+    StudentReadOnlyDTO updateStudent(Integer id,StudentUpdateDTO dto)
             throws StudentDAOException, StudentAlreadyExistsException, StudentNotFoundException;
     void deleteStudent(Integer id)  throws StudentDAOException, StudentNotFoundException;
     StudentReadOnlyDTO getStudentById(Integer id) throws StudentDAOException, StudentNotFoundException;

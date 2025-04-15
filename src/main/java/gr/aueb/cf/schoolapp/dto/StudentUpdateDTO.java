@@ -1,5 +1,12 @@
 package gr.aueb.cf.schoolapp.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@AllArgsConstructor
+@Getter
+@Setter
 public class StudentUpdateDTO extends BaseStudentDTO{
     private Integer id;
 
