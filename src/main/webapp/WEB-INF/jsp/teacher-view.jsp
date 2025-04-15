@@ -19,8 +19,18 @@
 
 <div class="container mt-5 mb-5">
     <div class="card shadow">
-        <div class="card-header bg-danger text-white">
-            <h4 class="mb-0"><i class="fas fa-user-edit me-2"></i> Προβολή Καθηγητή</h4>
+        <div class="card-header bg-secondary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">
+                    <i class="fas fa-user-edit me-2"></i> Προβολή Καθηγητή
+                </h4>
+        
+                <a href="${pageContext.request.contextPath}/school-app/teachers/view"
+                   class="btn btn-danger text-white border-danger">
+                    <i class="fas fa-arrow-left me-2"></i>
+                    Επιστροφή στην Προβολή καθηγητών
+                </a>
+            </div>
         </div>
 
         <div class="card-body">
