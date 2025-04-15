@@ -30,7 +30,7 @@ public class TeacherDetailsController extends HttpServlet {
         try {
             TeacherReadOnlyDTO teacher = teacherService.getTeacherById(id);
             request.setAttribute("teacher", teacher);
-            request.getRequestDispatcher("/WEB-INF/jsp/teacher-view.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/jsp/teacher-details.jsp").forward(request, response);
         }catch (Exception e){
             request.setAttribute("message","Ο καθηγητής δεν βρέθηκε.");
             request.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(request,response);

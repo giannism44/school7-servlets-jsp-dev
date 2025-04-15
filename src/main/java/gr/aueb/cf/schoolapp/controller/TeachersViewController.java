@@ -48,16 +48,16 @@ public class TeachersViewController extends HttpServlet {
 
             if (teacherReadOnlyDTOS.isEmpty()) {
                 request.setAttribute("message", "Teachers not found");
-                request.getRequestDispatcher("/WEB-INF/jsp/teachers3.jsp").forward(request, response);
+                request.getRequestDispatcher("/WEB-INF/jsp/teachers-view.jsp").forward(request, response);
                 return;
             }
 
             request.setAttribute("teachers", teacherReadOnlyDTOS);
-            request.getRequestDispatcher("/WEB-INF/jsp/teachers3.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/jsp/teachers-view.jsp").forward(request, response);
         } catch (TeacherDAOException e) {
             message = e.getMessage();
             request.setAttribute("message", message);
-            request.getRequestDispatcher("/WEB-INF/jsp/teachers3.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/jsp/teachers-view.jsp").forward(request, response);
         }
     }
 }
