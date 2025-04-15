@@ -6,7 +6,7 @@ public class StudentAlreadyExistsException extends Exception{
     @Serial
     private static final long serialVersionUID = 1L;
 
-    public TeacherAlreadyExistsException(String message) {
+    public StudentAlreadyExistsException(String message) {
         super(message);
     }
 }

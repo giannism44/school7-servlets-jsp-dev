@@ -6,7 +6,7 @@ public class StudentNotFoundException extends Exception{
     @Serial
     private static final long serialVersionUID = 1L;
 
-    public TeacherNotFoundException(String message) {
+    public StudentNotFoundException(String message) {
         super(message);
     }
 }
