@@ -2,8 +2,6 @@ package gr.aueb.cf.schoolapp.dao;
 
 import gr.aueb.cf.schoolapp.exceptions.StudentDAOException;
 import gr.aueb.cf.schoolapp.model.Student;
-
-import javax.swing.text.Style;
 import java.util.List;
 
 public interface IStudentDAO {

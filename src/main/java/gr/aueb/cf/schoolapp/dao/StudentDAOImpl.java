@@ -70,18 +70,15 @@ public class StudentDAOImpl implements IStudentDAO {
             ps.setString(8, student.getStreetNum());
             ps.setString(9, student.getZipCode());
             ps.setInt(10, student.getCityId());
-//            ps.setTimestamp(11, Timestamp.valueOf(teacher.getUpdatedAt()));
             ps.setTimestamp(11, Timestamp.valueOf(LocalDateTime.now()));
             ps.setInt(12, student.getId());
 
             ps.executeUpdate();
 
             updatedStudent = getById(student.getId());
-            // logging
             return updatedStudent;
         } catch (SQLException e) {
             e.printStackTrace();
-            // logging
             throw new StudentDAOException("SQL error in update student with vat: " + student.getVat());
         }
     }
@@ -95,10 +92,7 @@ public class StudentDAOImpl implements IStudentDAO {
 
             ps.setInt(1, id);
             ps.executeUpdate();
-            // logging
         } catch (SQLException e) {
-            // e.printStackTrace();
-            // logging
             throw new StudentDAOException("SQL error in delete with student id: " + id);
         }
     }
@@ -131,7 +125,7 @@ public class StudentDAOImpl implements IStudentDAO {
 
     @Override
     public List<Student> getAll() throws StudentDAOException {
-        String sql = "SELECT * FROM student";
+        String sql = "SELECT * FROM students";
         Student student;
         List<Student> students = new ArrayList<>();
         ResultSet rs;
@@ -149,8 +143,6 @@ public class StudentDAOImpl implements IStudentDAO {
                 students.add(student);
             }
         } catch (SQLException e) {
-            //e.printStackTrace();
-            // logging
             throw new StudentDAOException("SQL error in get all");
         }
         return students;
@@ -176,8 +168,6 @@ public class StudentDAOImpl implements IStudentDAO {
             }
             return student;
         } catch (SQLException e) {
-            // e.printStackTrace();
-            // logging
             throw new StudentDAOException("SQL error in get by uuid with uuid: " + uuid);
         }
     }
@@ -202,8 +192,6 @@ public class StudentDAOImpl implements IStudentDAO {
             }
             return students;
         } catch (SQLException e) {
-            // e.printStackTrace();
-            // logging
             throw new StudentDAOException("SQL error in get with lastname: " + lastname);
         }
     }
@@ -227,7 +215,6 @@ public class StudentDAOImpl implements IStudentDAO {
                         rs.getTimestamp("created_at").toLocalDateTime(), rs.getTimestamp("updated_at").toLocalDateTime());
             }
         } catch (SQLException e) {
-            //e.printStackTrace();
             throw new StudentDAOException("SQL error in get with vat: " + vat);
         }
         return student;
@@ -255,12 +242,10 @@ public class StudentDAOImpl implements IStudentDAO {
                         rs.getTimestamp("updated_at").toLocalDateTime());
                 students.add(student);
             }
-            // Logging
             students.forEach(System.out::println);
             return students;
         } catch (SQLException e) {
             e.printStackTrace();
-            // logging
             throw new StudentDAOException("SQL error in filtered get");
         }
     }

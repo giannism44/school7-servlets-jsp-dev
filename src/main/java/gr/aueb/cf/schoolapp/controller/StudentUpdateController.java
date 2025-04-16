@@ -120,7 +120,7 @@ public class StudentUpdateController extends HttpServlet {
     }catch (StudentDAOException | StudentAlreadyExistsException | StudentNotFoundException e){
             errorMessage = e.getMessage();
             req.setAttribute("errorMessage", errorMessage);
-            req.getRequestDispatcher("/WEB-INF/jsp/student-insert.jsp")
+            req.getRequestDispatcher("/WEB-INF/jsp/student-update.jsp")
                     .forward(req, resp);
         }
     }

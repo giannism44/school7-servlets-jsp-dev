@@ -7,7 +7,6 @@ import gr.aueb.cf.schoolapp.exceptions.StudentDAOException;
 import gr.aueb.cf.schoolapp.exceptions.StudentNotFoundException;
 import gr.aueb.cf.schoolapp.service.IStudentService;
 import gr.aueb.cf.schoolapp.service.StudentServiceImpl;
-import gr.aueb.cf.schoolapp.service.TeacherServiceImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
