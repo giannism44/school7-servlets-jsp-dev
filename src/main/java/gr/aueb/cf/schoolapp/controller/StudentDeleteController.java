@@ -35,6 +35,6 @@ public class StudentDeleteController extends HttpServlet {
             message = e.getMessage();
             request.setAttribute("message", message);
         }
-        request.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/jsp/success2.jsp").forward(request, response);
     }
 }

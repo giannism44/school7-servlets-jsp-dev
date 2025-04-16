@@ -16,6 +16,6 @@ public class StudentUpdatedController  extends HttpServlet {
             throws ServletException, IOException {
 
         request.setAttribute("message", "Ο μαθητής ενημερώθηκε με επιτυχία!");
-        request.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/jsp/success2.jsp").forward(request, response);
     }
 }
