@@ -13,9 +13,9 @@ public class StudentUpdateDTO extends BaseStudentDTO{
     public StudentUpdateDTO() {
     }
 
-    public StudentUpdateDTO(String firstname, String lastname, String vat,
+    public StudentUpdateDTO(Integer id, String firstname, String lastname, String vat,
                             String fatherName, String phoneNum, String email, String street,
-                            String streetNum, String zipCode, Integer cityId, Integer id) {
+                            String streetNum, String zipCode, Integer cityId) {
         super(firstname, lastname, vat, fatherName, phoneNum, email, street, streetNum, zipCode, cityId);
         this.id = id;
     }
