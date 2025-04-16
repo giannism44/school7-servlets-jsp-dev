@@ -69,14 +69,14 @@
               <a class="dropdown-item dropdown-toggle" href="#">Μαθητές</a>
               <ul class="dropdown-menu">
                 <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/students/view' />">
                     Προβολή
                     </a>
                 </li>
 
                  <c:if test="${sessionScope.role == 'ADMIN'}">
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="<c:url value='${pageContext.request.contextPath}/school-app/students/insert' />">
                         Εισαγωγή
                         </a>
                     </li>
