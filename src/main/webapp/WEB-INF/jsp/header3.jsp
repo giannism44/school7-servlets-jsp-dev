@@ -54,7 +54,6 @@
             </div>
         </div>
     </div>
-    <div class="h-0.5 bg-gradient-to-r from-red-600 to-red-700"></div>
 </header>
 </body>
 </html>
