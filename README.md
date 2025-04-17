@@ -15,7 +15,7 @@
 DTOs, Mappers, Service, DAO, Custom Exceptions
 
 🚀 Τεχνολογίες που χρησιμοποιήθηκαν:
-Java 21 (Amazon Corretto)
+Java 17 (Amazon Corretto)
 
 Servlets / JSP / JSTL
 
