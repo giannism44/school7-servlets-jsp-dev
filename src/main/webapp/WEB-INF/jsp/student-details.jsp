@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Πόλη</label>
-                    <input type="text" class="form-control" value="${student.cityId}" disabled>
+                    <input type="text" class="form-control" value="${cityName}" disabled>
                 </div>
             </div>
         </div>
